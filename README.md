@@ -18,6 +18,15 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 
 The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
 
+### Repository structure
+
+The code is structured as follows:
+
+Navigation.ipynb: Notebook which trains the DRL Agent. 
+agent.py: Python code for the a DQN agent class.
+model.py: Python code for the a neural network used to approximate the action value function (A-V).
+checkpoint.pth: Binary code containing the trained neural network weights.
+
 ### project environment 
 
 Describe the details (i.e., the state and action spaces, and when the environment is considered solved).
