@@ -27,6 +27,13 @@ agent.py: Python code for the a DQN agent class.
 model.py: Python code for the a neural network used to approximate the action value function (A-V).
 checkpoint.pth: Binary code containing the trained neural network weights.
 
+### Dependencies
+
+python 3.6
+numpy: install with ‘pip install numpy’.
+PyTorch: Installed using conda
+ml-agents: Installed using Windows 
+
 ### project environment 
 
 Describe the details (i.e., the state and action spaces, and when the environment is considered solved).
