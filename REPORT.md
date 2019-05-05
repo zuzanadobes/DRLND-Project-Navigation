@@ -46,7 +46,7 @@ A plot of rewards per episode is included to show rewards received as the number
 
 ### Ideas for Future Work
 
-The submission has concrete future ideas for improving the agent's performance.
+Concrete future ideas for improving the agent's performance could include to perform learning directly from pixels (e.g. images). The agent not be provided pre-processed information as it is nowe.g. ray-based representation of objects around it, but would have to extract relevant information from the images directly. 
 
 ## See also
 
