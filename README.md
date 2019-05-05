@@ -18,7 +18,13 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 
 The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
 
+### project environment 
+
+Describe the details (i.e., the state and action spaces, and when the environment is considered solved).
+
 ### Getting Started
+
+Instructions for installing dependencies or downloading needed files.
 
 1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
     - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
@@ -33,6 +39,8 @@ The task is episodic, and in order to solve the environment, your agent must get
 2. Place the file in the DRLND GitHub repository, in the `p1_navigation/` folder, and unzip (or decompress) the file. 
 
 ### Instructions
+
+A description of howto run the code in the repository, to train the agent. 
 
 Follow the instructions in `Navigation.ipynb` to get started with training your own agent!  
 
