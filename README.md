@@ -1,6 +1,6 @@
 # DRLND-Project-Navigation
 
-Udacity Project #1 Navigation - using For this project, you will train an agent to navigate (and collect bananas!) in a large, square world.
+Draft submission to Udacity of project code towards the completion of the nano degree "Deep Reinforcement Learning" (DRL). Project #1 called "Navigation" trains an agent to navigate (and collect bananas!) in a large, square world.
 
 ### Introduction
 
