@@ -6,8 +6,6 @@ Udacity Project #1 Navigation - using For this project, you will train an agent 
 
 For this project, you will train an agent to navigate (and collect bananas!) in a large, square world.  
 
-![Trained Agent][image1]
-
 A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.  Thus, the goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas.  
 
 The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around agent's forward direction.  Given this information, the agent has to learn how to best select actions.  Four discrete actions are available, corresponding to:
@@ -34,7 +32,7 @@ numpy: install with ‘pip install numpy’.
 PyTorch: Installed using conda
 ml-agents: Installed using Windows 
 
-### project environment 
+### Project Environment 
 
 Describe the details (i.e., the state and action spaces, and when the environment is considered solved).
 
