@@ -63,6 +63,54 @@ The repository contains a jupyter notebook, which needs to be run within a conda
 
 After training, the notebook will show the average score per hundred episodes will be displayed.
 
+### Useful Notes
+
+From Daniel Barbosa@ https://github.com/ucaiado/banana-rl
+
+#### Launch Instance
+- go to us-east-1
+- create spot instance with the following parameters:
+  - AMI: ami-18642967
+  - type: p2.xlarge
+  - security group: ssh-inbound-only
+  - key pair: <your key>
+- add SSH key (if needed): `ssh-add`
+- ssh to IP
+
+#### SSH
+#### Install ML-agents
+source activate pytorch_p36
+cd ml-agents
+git pull
+cd ml-agents/python
+pip install .
+
+#### Launch X server
+sudo /usr/bin/X :0 &
+nvidia-smi
+export DISPLAY=:0
+
+#### Install unity environments
+wget https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Linux.zip
+unzip VisualBanana_Linux.zip
+
+#### Test it's all working
+from unityagents import UnityEnvironment
+env = UnityEnvironment(file_name="VisualBanana_Linux/Banana.x86_64")
+brain_name = env.brain_names[0]
+info = env.reset(train_mode=True)[brain_name]
+state = info.visual_observations[0]
+
 ### See Also
 
 [ Windows version ] Check out [this link](https://support.microsoft.com/en-us/help/827218/how-to-determine-whether-a-computer-is-running-a-32-bit-version-or-64) if you need help with determining if your computer is running a 32-bit version or 64-bit version of the Windows operating system.
+
+### References
+1. Schaul, T., Quan, J., Antonoglou, I., & Silver, D. *Prioritized Experience Replay*. arXiv.org, 2015.
+2. Van Hasselt, H., Guez, A., & AAAI, D. S. *Deep Reinforcement Learning with Double Q-Learning*. Aaai.org, 2016.
+3. Mnih, V., Kavukcuoglu, K., Silver, D., Rusu, A. A., Veness, J., Bellemare, M. G., et al. *Human-level control through deep reinforcement learning*. Nature, 52015.
+
+### License
+The contents of this repository are covered under the [MIT License](LICENSE).
+
+
