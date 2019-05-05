@@ -57,6 +57,11 @@ Instructions for installing dependencies or downloading needed files.
 A description of howto run the code in the repository, to train the agent. 
 
 Follow the instructions in `Navigation.ipynb` to get started with training your own agent!  
+The repository contains a jupyter notebook, which needs to be run within a conda environment [ conda ] . Once you have your notebook running with a web browser (e.g. Chrome) you can begin training the deep reinforcement agent, by execute cells in Navigation.ipynb notebook. 
+
+# Output
+
+After training, the notebook will show the average score per hundred episodes will be displayed.
 
 ### (Optional) Challenge: Learning from Pixels
 
