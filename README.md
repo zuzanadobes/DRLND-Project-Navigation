@@ -48,6 +48,8 @@ Instructions for installing dependencies or downloading needed files.
 
 2. Place the file in the DRLND GitHub repository, in the `p1_navigation/` folder, and unzip (or decompress) the file. 
 
+3. Create a directory "pth_checkpoints" at the top level of the project, which will store the model output results.
+
 ### Instructions
 
 A description of howto run the code in the repository, to train the agent. 
