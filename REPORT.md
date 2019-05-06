@@ -11,6 +11,38 @@ This repository contains code built on top of the ml-agents from Unity [ Unity A
 
 This repository includes functional, well-documented, and organized code for training the agent.
 
+Algorithm used for training: DQN with Neural Network for functional approxmation of action-value function.
+
+#### Network architecture:
+
+Input: vector (dimensions: 37)
+Hidden Layer 1: Linear with 256 nodes + RELU
+Hidden Layer 2: Linear with 128 nodes + RELU 
+Output Layer: Linear with 4 nodes
+
+##### DQN
+
+Optimization : Adam
+Learning rate: 5e-4
+e-greedy policy with Epsilon anealing: Start = 1.
+e-greedy policy with Epsilon anealing: End: 0.01
+Decay: 0.995
+Discount factor: $\gamma$
+0.99
+Soft-update ratio, $\tau$
+
+0.001
+Network update interval
+
+The local and target networks are updated every 4 time steps.
+Replay buffer size
+
+10^5
+Minibatch size
+
+64
+With the above hyperparameters, the average score of the last 100 consecutive episodes reached 13.0 after 330 episodes.
+
 
 ### Model Weights
 
@@ -46,7 +78,9 @@ A plot of rewards per episode is included to show rewards received as the number
 
 ### Ideas for Future Work
 
-Concrete future ideas for improving the agent's performance could include to perform learning directly from pixels (e.g. images). The agent not be provided pre-processed information as it is nowe.g. ray-based representation of objects around it, but would have to extract relevant information from the images directly. 
+- Concrete future ideas for improving the agent's performance could include to perform learning directly from pixels (e.g. images). The agent not be provided pre-processed information as it is nowe.g. ray-based representation of objects around it, but would have to extract relevant information from the images directly. 
+- Apply the double DQN
+- Apply the dueling DQN
 
 ## See also
 
