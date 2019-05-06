@@ -62,7 +62,7 @@ After training, the notebook will show the average score per hundred episodes wi
 ### Useful Notes
 
 #### Install ML-agents
-source activate <i>designated environment with pytorch<i>
+source activate <i>designated environment with pytorch</i>
 cd ml-agents
 git pull
 cd ml-agents/python
