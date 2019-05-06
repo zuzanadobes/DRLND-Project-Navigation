@@ -52,11 +52,17 @@ The saved model weights of the successful agent are located in the file: xxxxx
 
 The report clearly describes the learning algorithm, along with the chosen hyperparameters. It also describes the model architectures for any neural networks.
 
+- Evaluate the state and action space.
+- Establish baseline using a random action policy.
+- Implement learning algorithm.
+- Run experiments to measure agent performance.
+- Select best performing agent and capture video of it navigating the environment.
+
 ### Agent Goal and Actions
 
 The Agent code performs an episodic task and achieve a score which exceeds 13 after 100 consecutive episodes. The agent needs to select actions that help it to collect as many yellow bananas as possible and avoiding blue bananas.
 
-The Agent code is capable of executing four possible actions to help him solve the task:
+The Agent code is capable of executing four possible discrete actions to help him solve the task:
 0 — move forward.
 1 — move backward.
 2 — turn left.
@@ -66,7 +72,7 @@ The Agent code is capable of executing four possible actions to help him solve t
 
 The agent is rewarded with +1 for collecting a yellow banana, and a reward of -1 collecting a blue banana. 
 
-### State Space
+### Evaluate State Space
 37 dimensions which includes:
 - agent’s velocity, 
 - ray-based perception of objects around the agent’s forward direction. 
