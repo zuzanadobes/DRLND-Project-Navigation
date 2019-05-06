@@ -45,10 +45,6 @@ Instructions for installing dependencies or downloading needed files.
     - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
     - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
     - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
-    
-
-
-    (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux_NoVis.zip) to obtain the environment.
 
 2. Place the file in the DRLND GitHub repository, in the `p1_navigation/` folder, and unzip (or decompress) the file. 
 
@@ -65,45 +61,23 @@ After training, the notebook will show the average score per hundred episodes wi
 
 ### Useful Notes
 
-From Daniel Barbosa@ https://github.com/ucaiado/banana-rl
-
-#### Launch Instance
-- go to us-east-1
-- create spot instance with the following parameters:
-  - AMI: ami-18642967
-  - type: p2.xlarge
-  - security group: ssh-inbound-only
-  - key pair: <your key>
-- add SSH key (if needed): `ssh-add`
-- ssh to IP
-
-#### SSH
 #### Install ML-agents
-source activate pytorch_p36
+source activate <i>designated environment with pytorch<i>
 cd ml-agents
 git pull
 cd ml-agents/python
 pip install .
 
-#### Launch X server
-sudo /usr/bin/X :0 &
-nvidia-smi
-export DISPLAY=:0
-
 #### Install unity environments
-wget https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Linux.zip
+from https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Linux.zip
 unzip VisualBanana_Linux.zip
 
-#### Test it's all working
+#### Test that it's all working
 from unityagents import UnityEnvironment
 env = UnityEnvironment(file_name="VisualBanana_Linux/Banana.x86_64")
 brain_name = env.brain_names[0]
 info = env.reset(train_mode=True)[brain_name]
 state = info.visual_observations[0]
-
-### See Also
-
-[ Windows version ] Check out [this link](https://support.microsoft.com/en-us/help/827218/how-to-determine-whether-a-computer-is-running-a-32-bit-version-or-64) if you need help with determining if your computer is running a 32-bit version or 64-bit version of the Windows operating system.
 
 ### References
 1. Schaul, T., Quan, J., Antonoglou, I., & Silver, D. *Prioritized Experience Replay*. arXiv.org, 2015.
