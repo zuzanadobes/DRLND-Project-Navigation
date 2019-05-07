@@ -20,27 +20,40 @@ Hidden Layer 1: Linear with 256 nodes + RELU
 Hidden Layer 2: Linear with 128 nodes + RELU 
 Output Layer: Linear with 4 nodes
 
-##### DQN
+##### Parameters
+
+'gamma': 0.99,                 # discount factor for agent
+'state_size': state_size,      # size of the state space
+'action_size': action_size,    # size of the action space
+'hidden_layers': [128, 64],    # hidden layer neurons
+'brain_name' : brain_name,     # the brain name of the unity environment
+'BUFFER_SIZE': int(1e5),       # replay buffer size
+'BATCH_SIZE' : 64,             # minibatch size
+'LR' : 5e-4,                   # learning rate
+'TAU' : 1e-3,                  # for soft update of target parameters
+'UPDATE_EVERY' : 4             # how often local and target network are updated
+
+Administration:
+'name': 'DQN+Parameter-Set-1', # Name of the parameter set
+'environment': env,            # The environment object
+'brain_name': brain_name,      # The brain name for the unity environment
+'episodes': 600,               # number of episodes
+'max_t': 5000,                 # maximum length of an episode
+'state_size': state_size,      # size of the state space
+'action_size': action_size,    # size of the action space
+'hidden_layers': [128, 64],    # hidden layer neurons
+'brain_name' : brain_name,     # the brain name of the unity environment
+'BUFFER_SIZE': int(1e5),       # replay buffer size
+'BATCH_SIZE' : 64,             # minibatch size
 
 Optimization : Adam
-Learning rate: 5e-4
-e-greedy policy with Epsilon anealing: Start = 1.
-e-greedy policy with Epsilon anealing: End: 0.01
+e-greedy policy with Epsilon anealing Start: 1.
+e-greedy policy with Epsilon anealing End: 0.01
 Decay: 0.995
-Discount factor: $\gamma$
-0.99
-Soft-update ratio, $\tau$
+Discount factor: $\gamma$ 0.99
+Soft-update ratio, $\tau$ 0.001
+Replay buffer size 64
 
-0.001
-Network update interval
-
-The local and target networks are updated every 4 time steps.
-Replay buffer size
-
-10^5
-Minibatch size
-
-64
 With the above hyperparameters, the average score of the last 100 consecutive episodes reached 13.0 after 330 episodes.
 
 
@@ -79,8 +92,8 @@ The agent is rewarded with +1 for collecting a yellow banana, and a reward of -1
  
 ### Reward plot
 
-The number of episodes needed to solve the environment: #
-A plot of rewards per episode is included to show rewards received as the number of episodes goes over 100:
+The number of episodes needed to solve the environment: ##<br>
+A plot of rewards per episode is included to show rewards received as the number of episodes goes over 100 : ##<br>
 
 ### Ideas for Future Work
 
